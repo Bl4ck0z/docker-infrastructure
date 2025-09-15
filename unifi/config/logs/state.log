@@ -1,0 +1,15 @@
+[2025-01-31T16:09:26,190Z] <launcher> INFO  state  - Creating Default Local Area Network for Site[679cf594451e292aa535a8fe]
+[2025-01-31T16:11:35,419Z] <webapi-4> INFO  state  - Added WS listener for site[679cf594451e292aa535a8fd], total count: 1
+[2025-01-31T16:11:35,437Z] <webapi-2> INFO  state  - Added WS listener for site[679cf594451e292aa535a8fe], total count: 2
+[2025-01-31T16:39:54,289Z] <webapi-36> INFO  state  - Added WS listener for site[679cf594451e292aa535a8fe], total count: 3
+[2025-01-31T16:39:54,373Z] <webapi-33> INFO  state  - Added WS listener for site[679cf594451e292aa535a8fd], total count: 4
+[2025-01-31T21:02:53,077Z] <webapi-126> INFO  state  - Removed WS listener for site[679cf594451e292aa535a8fd], total count: 3
+[2025-01-31T21:02:53,078Z] <webapi-123> INFO  state  - Removed WS listener for site[679cf594451e292aa535a8fe], total count: 2
+[2025-01-31T21:53:03,530Z] <webapi-123> INFO  state  - Removed WS listener for site[679cf594451e292aa535a8fe], total count: 1
+[2025-01-31T21:53:03,530Z] <webapi-126> INFO  state  - Removed WS listener for site[679cf594451e292aa535a8fd], total count: 0
+[2025-01-31T21:53:03,531Z] <webapi-126> INFO  state  - Removed WS listener for site[679cf594451e292aa535a8fd], total count: 0
+[2025-01-31T21:53:03,531Z] <webapi-123> INFO  state  - Removed WS listener for site[679cf594451e292aa535a8fe], total count: 0
+[2025-02-21T17:43:09,229-04:00] <webapi-4> INFO  state  - Added WS listener for site[679cf594451e292aa535a8fd], total count: 1
+[2025-02-21T17:43:09,238-04:00] <webapi-2> INFO  state  - Added WS listener for site[679cf594451e292aa535a8fe], total count: 2
+[2025-02-21T17:45:50,334-04:00] <webapi-2> INFO  state  - Removed WS listener for site[679cf594451e292aa535a8fe], total count: 1
+[2025-02-21T17:45:50,335-04:00] <webapi-11> INFO  state  - Removed WS listener for site[679cf594451e292aa535a8fd], total count: 0

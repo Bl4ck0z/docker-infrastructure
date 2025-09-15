@@ -1,0 +1,2 @@
+[2025-07-14T17:28:19,227-04:00] <launcher> INFO  startup - Initiating startup
+[2025-07-14T17:28:20,021-04:00] <launcher> WARN  startup -   component[mongoRuntimeService] initialization took 289ms

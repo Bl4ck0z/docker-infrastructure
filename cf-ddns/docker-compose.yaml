@@ -1,0 +1,26 @@
+---
+services:
+  cf-ddns:
+    image: favonia/cloudflare-ddns:latest
+    container_name: cf-ddns
+    network_mode: host
+    restart: always
+    user: "1000:1000"     
+    read_only: true
+    cap_drop: [all]
+    security_opt: [no-new-privileges:true]
+    environment:
+      CLOUDFLARE_API_TOKEN: ${CLOUDFLARE_API_TOKEN}
+      DOMAINS: ${DOMAINS}
+      IP4_PROVIDER: ${IP4_PROVIDER}
+      IP6_PROVIDER: ${IP6_PROVIDER}
+      CACHE_EXPIRATION: ${CACHE_EXPIRATION}
+      DELETE_ON_STOP: ${DELETE_ON_STOP}
+      TZ: ${TZ}
+      UPDATE_CRON: ${UPDATE_CRON}
+      UPDATE_ON_START: ${UPDATE_ON_START}
+      DETECTION_TIMEOUT: ${DETECTION_TIMEOUT}
+      UPDATE_TIMEOUT: ${UPDATE_TIMEOUT}
+      PROXIED: ${PROXIED}
+      TTL: ${TTL}
+      RECORD_COMMENT: ${RECORD_COMMENT}

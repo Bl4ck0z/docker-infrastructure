@@ -1,0 +1,31 @@
+---
+services:
+  rustdesk-hbbs:
+    image: rustdesk/rustdesk-server:latest
+    container_name: rustdesk-hbbs
+    restart: unless-stopped
+    security_opt: [no-new-privileges:true]
+    command: hbbs -r facuint.org:21117
+    ports:
+      - "21115:21115"
+      - "21116:21116" 
+      - "21116:21116/udp"
+    environment: [ALWAYS_USE_RELAY=Y]
+    volumes: [./data:/root]
+    networks: [rustdesk]
+    depends_on: [rustdesk-hbbr]
+
+  rustdesk-hbbr:
+    image: rustdesk/rustdesk-server:latest
+    container_name: rustdesk-hbbr
+    restart: unless-stopped
+    security_opt: [no-new-privileges:true]
+    command: hbbr
+    ports: 
+      - "21117:21117"
+    volumes: [./data:/root]
+    networks: [rustdesk]
+
+networks:
+  rustdesk:
+    driver: bridge

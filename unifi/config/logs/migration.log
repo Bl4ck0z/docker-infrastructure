@@ -1,0 +1,237 @@
+[2025-07-12T10:42:43,736-04:00] <launcher> INFO  migration - Version 9.0.108 has changed to 9.2.87, attempting to start migration
+[2025-07-12T10:42:44,188-04:00] <launcher> INFO  migration - DB migration initialized
+[2025-07-12T10:42:44,195-04:00] <launcher> INFO  migration - DB version (9.0.108) different from Runtime Version(9.2.87), migrating...
+[2025-07-12T10:42:44,576-04:00] <launcher> INFO  migration - *** Migrating site[679cf594451e292aa535a8fe]
+[2025-07-12T10:42:44,589-04:00] <launcher> INFO  migration - Started migration step: Provision UbiOS devices if any FEC-mode supporting port configured auto-negotiation
+[2025-07-12T10:42:44,594-04:00] <launcher> INFO  migration - Finished migration step: Provision UbiOS devices if any FEC-mode supporting port configured auto-negotiation
+[2025-07-12T10:42:44,594-04:00] <launcher> INFO  migration - Started migration step: Remove config meta for site and reprovision
+[2025-07-12T10:42:44,609-04:00] <launcher> INFO  migration - Marking device for provisioning during DB migration. Model: U7MSH, MAC: d8:b3:70:c0:34:05
+[2025-07-12T10:42:44,614-04:00] <launcher> INFO  migration - Marking device for provisioning during DB migration. Model: U7MSH, MAC: d8:b3:70:b9:a9:9d
+[2025-07-12T10:42:44,618-04:00] <launcher> INFO  migration - Finished migration step: Remove config meta for site and reprovision
+[2025-07-12T10:42:44,619-04:00] <launcher> INFO  migration - Started migration step: Create missing default Pre-set channel width in WiFi AI Setting
+[2025-07-12T10:42:44,629-04:00] <launcher> INFO  migration - Finished migration step: Create missing default Pre-set channel width in WiFi AI Setting
+[2025-07-12T10:42:44,636-04:00] <launcher> INFO  migration - Started migration step: Reprovision wireless adopted devices
+[2025-07-12T10:42:44,639-04:00] <launcher> INFO  migration - Marking device for provisioning during DB migration. Model: U7MSH, MAC: d8:b3:70:c0:34:05
+[2025-07-12T10:42:44,643-04:00] <launcher> INFO  migration - Marking device for provisioning during DB migration. Model: U7MSH, MAC: d8:b3:70:b9:a9:9d
+[2025-07-12T10:42:44,648-04:00] <launcher> INFO  migration - Finished migration step: Reprovision wireless adopted devices
+[2025-07-12T10:42:44,648-04:00] <launcher> INFO  migration - Started migration step: Remove invalid AP ethernet_table entries
+[2025-07-12T10:42:44,652-04:00] <launcher> INFO  migration - Finished migration step: Remove invalid AP ethernet_table entries
+[2025-07-12T10:42:44,652-04:00] <launcher> INFO  migration - Started migration step: Set default failover priority for WANs
+[2025-07-12T10:42:44,654-04:00] <launcher> INFO  migration - Finished migration step: Set default failover priority for WANs
+[2025-07-12T10:42:44,655-04:00] <launcher> INFO  migration - Started migration step: Provision gateway to address Zone-Based Firewall incorrect allow respond traffic rule generation
+[2025-07-12T10:42:44,663-04:00] <launcher> INFO  migration - Finished migration step: Provision gateway to address Zone-Based Firewall incorrect allow respond traffic rule generation
+[2025-07-12T10:42:44,664-04:00] <launcher> INFO  migration - Started migration step: Create ULTE Failover network if missing
+[2025-07-12T10:42:44,668-04:00] <launcher> INFO  migration - Finished migration step: Create ULTE Failover network if missing
+[2025-07-12T10:42:44,669-04:00] <launcher> INFO  migration - Started migration step: Remove config meta for site and reprovision
+[2025-07-12T10:42:44,672-04:00] <launcher> INFO  migration - Marking device for provisioning during DB migration. Model: U7MSH, MAC: d8:b3:70:c0:34:05
+[2025-07-12T10:42:44,676-04:00] <launcher> INFO  migration - Marking device for provisioning during DB migration. Model: U7MSH, MAC: d8:b3:70:b9:a9:9d
+[2025-07-12T10:42:44,680-04:00] <launcher> INFO  migration - Finished migration step: Remove config meta for site and reprovision
+[2025-07-12T10:42:44,681-04:00] <launcher> INFO  migration - Started migration step: Provision gateway to address Zone-Based Firewall allow return policy order
+[2025-07-12T10:42:44,683-04:00] <launcher> INFO  migration - Finished migration step: Provision gateway to address Zone-Based Firewall allow return policy order
+[2025-07-12T10:42:44,683-04:00] <launcher> INFO  migration - Started migration step: Provision switches affected by IPv4 ACL rules with source or destination port set to Any
+[2025-07-12T10:42:44,690-04:00] <launcher> INFO  migration - Finished migration step: Provision switches affected by IPv4 ACL rules with source or destination port set to Any
+[2025-07-12T10:42:44,691-04:00] <launcher> INFO  migration - Started migration step: Provision gateway to address Zone-Based QoS rules without schedule
+[2025-07-12T10:42:44,696-04:00] <launcher> INFO  migration - Finished migration step: Provision gateway to address Zone-Based QoS rules without schedule
+[2025-07-12T10:42:44,697-04:00] <launcher> INFO  migration - Started migration step: Provision layer-3 switches if layer-3 routing exists
+[2025-07-12T10:42:44,701-04:00] <launcher> INFO  migration - Finished migration step: Provision layer-3 switches if layer-3 routing exists
+[2025-07-12T10:42:44,701-04:00] <launcher> INFO  migration - Started migration step: Provision gateway for port forwarding
+[2025-07-12T10:42:44,702-04:00] <launcher> INFO  migration - Finished migration step: Provision gateway for port forwarding
+[2025-07-12T10:42:44,703-04:00] <launcher> INFO  migration - Started migration step: Append burst fields for QoS rule
+[2025-07-12T10:42:44,705-04:00] <launcher> INFO  migration - Finished migration step: Append burst fields for QoS rule
+[2025-07-12T10:42:44,705-04:00] <launcher> INFO  migration - Started migration step: Append objective field for QoS rule
+[2025-07-12T10:42:44,706-04:00] <launcher> INFO  migration - Finished migration step: Append objective field for QoS rule
+[2025-07-12T10:42:44,707-04:00] <launcher> INFO  migration - Started migration step: Assign internal zone for inter routing vlan
+[2025-07-12T10:42:44,712-04:00] <launcher> INFO  migration - Finished migration step: Assign internal zone for inter routing vlan
+[2025-07-12T10:42:44,713-04:00] <launcher> INFO  migration - Started migration step: Append lag_idx for aggregate port and re-provision USW devices
+[2025-07-12T10:42:44,715-04:00] <launcher> INFO  migration - Finished migration step: Append lag_idx for aggregate port and re-provision USW devices
+[2025-07-12T10:42:44,716-04:00] <launcher> INFO  migration - Started migration step: Provision gateway to address not assigned network groups
+[2025-07-12T10:42:44,718-04:00] <launcher> INFO  migration - Finished migration step: Provision gateway to address not assigned network groups
+[2025-07-12T10:42:44,718-04:00] <launcher> INFO  migration - Started migration step: Remove config meta for site and reprovision for MediaTek APs
+[2025-07-12T10:42:44,723-04:00] <launcher> INFO  migration - Finished migration step: Remove config meta for site and reprovision for MediaTek APs
+[2025-07-12T10:42:44,724-04:00] <launcher> INFO  migration - Started migration step: Create default mDNS discovered services setting
+[2025-07-12T10:42:44,738-04:00] <launcher> INFO  migration - Finished migration step: Create default mDNS discovered services setting
+[2025-07-12T10:42:44,739-04:00] <launcher> INFO  migration - Started migration step: Create default mDNS discovered services setting
+[2025-07-12T10:42:44,740-04:00] <launcher> INFO  migration - Finished migration step: Create default mDNS discovered services setting
+[2025-07-12T10:42:44,741-04:00] <launcher> INFO  migration - Started migration step: Remove config meta for site and reprovision for MediaTek APs
+[2025-07-12T10:42:44,744-04:00] <launcher> INFO  migration - Finished migration step: Remove config meta for site and reprovision for MediaTek APs
+[2025-07-12T10:42:44,744-04:00] <launcher> INFO  migration - Started migration step: Create missing default Pre-set DFS enabled flag in WiFi AI Setting
+[2025-07-12T10:42:44,749-04:00] <launcher> INFO  migration - Finished migration step: Create missing default Pre-set DFS enabled flag in WiFi AI Setting
+[2025-07-12T10:42:44,750-04:00] <launcher> INFO  migration - Started migration step: Migrate Shadow Mode setting for Multi-WAN support
+[2025-07-12T10:42:44,751-04:00] <launcher> INFO  migration - Finished migration step: Migrate Shadow Mode setting for Multi-WAN support
+[2025-07-12T10:42:44,752-04:00] <launcher> INFO  migration - Started migration step: Remove PoE mode control from UDB not supporting the feature
+[2025-07-12T10:42:44,754-04:00] <launcher> INFO  migration - Finished migration step: Remove PoE mode control from UDB not supporting the feature
+[2025-07-12T10:42:44,754-04:00] <launcher> INFO  migration - Started migration step: Append mc_lag_index to MC-LAG groups
+[2025-07-12T10:42:44,757-04:00] <launcher> INFO  migration - Finished migration step: Append mc_lag_index to MC-LAG groups
+[2025-07-12T10:42:44,757-04:00] <launcher> INFO  migration - Started migration step: Re-provision Mesh Points to apply new bridge-firewall configuration
+[2025-07-12T10:42:44,759-04:00] <launcher> INFO  migration - Finished migration step: Re-provision Mesh Points to apply new bridge-firewall configuration
+[2025-07-12T10:42:44,759-04:00] <launcher> INFO  migration - Started migration step: Adjust Identity VPN rule name
+[2025-07-12T10:42:44,760-04:00] <launcher> INFO  migration - Finished migration step: Adjust Identity VPN rule name
+[2025-07-12T10:42:44,761-04:00] <launcher> INFO  migration - Started migration step: Migrate SSL Inspection Filter Id format
+[2025-07-12T10:42:44,762-04:00] <launcher> INFO  migration - Finished migration step: Migrate SSL Inspection Filter Id format
+[2025-07-12T10:42:44,762-04:00] <launcher> INFO  migration - Started migration step: Add disabled property for ethernet overrides
+[2025-07-12T10:42:44,764-04:00] <launcher> INFO  migration - Finished migration step: Add disabled property for ethernet overrides
+[2025-07-12T10:42:44,765-04:00] <launcher> INFO  migration - Started migration step: Remove gateway without switch capabilities from global switch settings
+[2025-07-12T10:42:44,768-04:00] <launcher> INFO  migration - Finished migration step: Remove gateway without switch capabilities from global switch settings
+[2025-07-12T10:42:44,768-04:00] <launcher> INFO  migration - Started migration step: Remove traffic rule, simple app block, firewall policy apps over the limit
+[2025-07-12T10:42:44,776-04:00] <launcher> INFO  migration - Finished migration step: Remove traffic rule, simple app block, firewall policy apps over the limit
+[2025-07-12T10:42:44,776-04:00] <launcher> INFO  migration - Started migration step: Provision USW to Have IGMP Multicast configuration
+[2025-07-12T10:42:44,778-04:00] <launcher> INFO  migration - Finished migration step: Provision USW to Have IGMP Multicast configuration
+[2025-07-12T10:42:44,778-04:00] <launcher> INFO  migration - Started migration step: Migrate load balancing weight for WAN1
+[2025-07-12T10:42:44,780-04:00] <launcher> INFO  migration - Finished migration step: Migrate load balancing weight for WAN1
+[2025-07-12T10:42:44,781-04:00] <launcher> INFO  migration - Started migration step: Provision UDM with QCA WiFi Chip
+[2025-07-12T10:42:44,782-04:00] <launcher> INFO  migration - Finished migration step: Provision UDM with QCA WiFi Chip
+[2025-07-12T10:42:44,783-04:00] <launcher> INFO  migration - Started migration step: Re-provision gateway config for firewall zone rules
+[2025-07-12T10:42:44,784-04:00] <launcher> INFO  migration - Finished migration step: Re-provision gateway config for firewall zone rules
+[2025-07-12T10:42:44,785-04:00] <launcher> INFO  migration - Started migration step: Re-provision UDR
+[2025-07-12T10:42:44,787-04:00] <launcher> INFO  migration - Finished migration step: Re-provision UDR
+[2025-07-12T10:42:44,787-04:00] <launcher> INFO  migration - Started migration step: Re-provision gateway if LAG created on standalone port and if there is VLAN-Only network in site
+[2025-07-12T10:42:44,788-04:00] <launcher> INFO  migration - Finished migration step: Re-provision gateway if LAG created on standalone port and if there is VLAN-Only network in site
+[2025-07-12T10:42:44,789-04:00] <launcher> INFO  migration - Started migration step: Re-provision gateway config for firewall zone rules
+[2025-07-12T10:42:44,790-04:00] <launcher> INFO  migration - Finished migration step: Re-provision gateway config for firewall zone rules
+[2025-07-12T10:42:44,790-04:00] <launcher> INFO  migration - Started migration step: Update absent WAN network group in downtime history to WAN1
+[2025-07-12T10:42:44,799-04:00] <launcher> INFO  migration - Update absent wan_networkgroup in downtime documents to WAN. matched: 0, modified: 0
+[2025-07-12T10:42:44,799-04:00] <launcher> INFO  migration - Finished migration step: Update absent WAN network group in downtime history to WAN1
+[2025-07-12T10:42:44,800-04:00] <launcher> INFO  migration - Started migration step: Re-provision gateway if it has LAG created and is enabled Jumbo-Frame
+[2025-07-12T10:42:44,802-04:00] <launcher> INFO  migration - Finished migration step: Re-provision gateway if it has LAG created and is enabled Jumbo-Frame
+[2025-07-12T10:42:44,803-04:00] <launcher> INFO  migration - Started migration step: Re-provision switch devices without IGMP support
+[2025-07-12T10:42:44,804-04:00] <launcher> INFO  migration - Finished migration step: Re-provision switch devices without IGMP support
+[2025-07-12T10:42:44,805-04:00] <launcher> INFO  migration - Started migration step: Populate mDNS setting mode
+[2025-07-12T10:42:44,806-04:00] <launcher> INFO  migration - Finished migration step: Populate mDNS setting mode
+[2025-07-12T10:42:44,807-04:00] <launcher> INFO  migration - Started migration step: Remove invalid IPS/IDS categories from suppression alerts
+[2025-07-12T10:42:44,809-04:00] <launcher> INFO  migration - Finished migration step: Remove invalid IPS/IDS categories from suppression alerts
+[2025-07-12T10:42:44,809-04:00] <launcher> INFO  migration - Started migration step: Re-provision UDM Base if disabled LAN in Ethernet Overrides
+[2025-07-12T10:42:44,812-04:00] <launcher> INFO  migration - Finished migration step: Re-provision UDM Base if disabled LAN in Ethernet Overrides
+[2025-07-12T10:42:44,812-04:00] <launcher> INFO  migration - Started migration step: Re-provision devices if FEC mode supported and enabled on any LAG port
+[2025-07-12T10:42:44,815-04:00] <launcher> INFO  migration - Finished migration step: Re-provision devices if FEC mode supported and enabled on any LAG port
+[2025-07-12T10:42:44,816-04:00] <launcher> INFO  migration - Started migration step: Re-provision L3 switches if they have custom default gateway for owned L3 networks
+[2025-07-12T10:42:44,818-04:00] <launcher> INFO  migration - Finished migration step: Re-provision L3 switches if they have custom default gateway for owned L3 networks
+[2025-07-12T10:42:44,818-04:00] <launcher> INFO  migration - Started migration step: Re-provision AFC enabled APs in Canada
+[2025-07-12T10:42:44,820-04:00] <launcher> INFO  migration - Finished migration step: Re-provision AFC enabled APs in Canada
+[2025-07-12T10:42:44,820-04:00] <launcher> INFO  migration - Started migration step: Populate _class for alert parameter data
+[2025-07-12T10:42:44,821-04:00] <launcher> INFO  migration - Finished migration step: Populate _class for alert parameter data
+[2025-07-12T10:42:44,822-04:00] <launcher> INFO  migration - Started migration step: Re-provision L3 switches if L3 blackhole routes present in site
+[2025-07-12T10:42:44,823-04:00] <launcher> INFO  migration - Finished migration step: Re-provision L3 switches if L3 blackhole routes present in site
+[2025-07-12T10:42:44,824-04:00] <launcher> INFO  migration - Started migration step: Rename igmp_forward_unknown_multicast to igmp_flood_unknown_multicast in network configuration
+[2025-07-12T10:42:44,826-04:00] <launcher> INFO  migration - Finished migration step: Rename igmp_forward_unknown_multicast to igmp_flood_unknown_multicast in network configuration
+[2025-07-12T10:42:44,827-04:00] <launcher> INFO  migration - Started migration step: Re-provision switch devices without IGMP support
+[2025-07-12T10:42:44,828-04:00] <launcher> INFO  migration - Finished migration step: Re-provision switch devices without IGMP support
+[2025-07-12T10:42:44,828-04:00] <launcher> INFO  migration - Started migration step: Provision APs to include shadow mode gateway MAC in broadcast filter exceptions
+[2025-07-12T10:42:44,831-04:00] <launcher> INFO  migration - Finished migration step: Provision APs to include shadow mode gateway MAC in broadcast filter exceptions
+[2025-07-12T10:42:44,832-04:00] <launcher> INFO  migration - Started migration step: Update missing weighted load balancing type WAN
+[2025-07-12T10:42:44,833-04:00] <launcher> INFO  migration - Finished migration step: Update missing weighted load balancing type WAN
+[2025-07-12T10:42:44,834-04:00] <launcher> INFO  migration - Started migration step: Create default Traffic Flow Setting
+[2025-07-12T10:42:44,836-04:00] <launcher> INFO  migration - Finished migration step: Create default Traffic Flow Setting
+[2025-07-12T10:42:44,837-04:00] <launcher> INFO  migration - Started migration step: Seed additional Traffic Flows Settings
+[2025-07-12T10:42:44,838-04:00] <launcher> INFO  migration - Finished migration step: Seed additional Traffic Flows Settings
+[2025-07-12T10:42:44,839-04:00] <launcher> INFO  migration - Started migration step: Remove unused NAT outbound IP config
+[2025-07-12T10:42:44,840-04:00] <launcher> INFO  migration - Finished migration step: Remove unused NAT outbound IP config
+[2025-07-12T10:42:44,841-04:00] <launcher> INFO  migration - Started migration step: Seed Roaming Assistant Setting
+[2025-07-12T10:42:44,848-04:00] <launcher> INFO  migration - Finished migration step: Seed Roaming Assistant Setting
+[2025-07-12T10:42:44,849-04:00] <launcher> INFO  migration - Started migration step: Replace aggregate_num_ports with aggregate_members in port_overrides
+[2025-07-12T10:42:44,851-04:00] <launcher> INFO  migration - Finished migration step: Replace aggregate_num_ports with aggregate_members in port_overrides
+[2025-07-12T10:42:44,851-04:00] <launcher> INFO  migration - Started migration step: Ensure lag_idx present LAG ports and re-provision devices
+[2025-07-12T10:42:44,853-04:00] <launcher> INFO  migration - Finished migration step: Ensure lag_idx present LAG ports and re-provision devices
+[2025-07-12T10:42:44,854-04:00] <launcher> INFO  migration - Started migration step: Update conservative preset type radios configuration to align with default
+[2025-07-12T10:42:44,858-04:00] <launcher> INFO  migration - Finished migration step: Update conservative preset type radios configuration to align with default
+[2025-07-12T10:42:44,859-04:00] <launcher> INFO  migration - Started migration step: Provision USW when device isolation list contain L3 network
+[2025-07-12T10:42:44,861-04:00] <launcher> INFO  migration - Finished migration step: Provision USW when device isolation list contain L3 network
+[2025-07-12T10:42:44,862-04:00] <launcher> INFO  migration - Started migration step: Migrate AP with incorrect AFC channel to AUTO and re-provision
+[2025-07-12T10:42:44,863-04:00] <launcher> INFO  migration - Finished migration step: Migrate AP with incorrect AFC channel to AUTO and re-provision
+[2025-07-12T10:42:44,863-04:00] <launcher> INFO  migration - Started migration step: Re-provision L3 switch if it has two or more L3 routes and networks assigned
+[2025-07-12T10:42:44,864-04:00] <launcher> INFO  migration - Finished migration step: Re-provision L3 switch if it has two or more L3 routes and networks assigned
+[2025-07-12T10:42:44,865-04:00] <launcher> INFO  migration - Started migration step: Provision UX family gateway to handle potential issues on WPA enterprise
+[2025-07-12T10:42:44,870-04:00] <launcher> INFO  migration - Finished migration step: Provision UX family gateway to handle potential issues on WPA enterprise
+[2025-07-12T10:42:44,870-04:00] <launcher> INFO  migration - Started migration step: Re-provision SNMP enabled UX family mesh device
+[2025-07-12T10:42:44,871-04:00] <launcher> INFO  migration - Finished migration step: Re-provision SNMP enabled UX family mesh device
+[2025-07-12T10:42:44,872-04:00] <launcher> INFO  migration - Started migration step: Rename SIGNAL_STRENGTH_FROM parameter to PREVIOUS_SIGNAL_STRENGTH
+[2025-07-12T10:42:44,873-04:00] <launcher> INFO  migration - Finished migration step: Rename SIGNAL_STRENGTH_FROM parameter to PREVIOUS_SIGNAL_STRENGTH
+[2025-07-12T10:42:44,932-04:00] <launcher> INFO  migration - Started migration step: Create "Custom Verification" WAN SLA and assign to WAN networks
+[2025-07-12T10:42:44,935-04:00] <launcher> INFO  migration - Finished migration step: Create "Custom Verification" WAN SLA and assign to WAN networks
+[2025-07-12T10:42:44,935-04:00] <launcher> INFO  migration - *** Migrating system
+[2025-07-12T10:42:44,936-04:00] <launcher> INFO  migration - Started migration step: Drop ace_stat.stat_dpi collection
+[2025-07-12T10:42:44,941-04:00] <launcher> INFO  migration - Finished migration step: Drop ace_stat.stat_dpi collection
+[2025-07-12T10:42:44,942-04:00] <launcher> INFO  migration - Started migration step: Provision gateways with SD-WAN to remove DnsServers from wireguard config
+[2025-07-12T10:42:44,944-04:00] <launcher> INFO  migration - Finished migration step: Provision gateways with SD-WAN to remove DnsServers from wireguard config
+[2025-07-12T10:42:44,944-04:00] <launcher> INFO  migration - Started migration step: Remove pending Admin invitations on UCore setups
+[2025-07-12T10:42:44,944-04:00] <launcher> INFO  migration - Finished migration step: Remove pending Admin invitations on UCore setups
+[2025-07-12T10:42:44,945-04:00] <launcher> INFO  migration - Started migration step: Remove Multi-Chassis Link alerts
+[2025-07-12T10:42:44,946-04:00] <launcher> INFO  migration - Finished migration step: Remove Multi-Chassis Link alerts
+[2025-07-12T10:42:44,947-04:00] <launcher> INFO  migration - Started migration step: Provision gateways with SD-WAN spoke configuration and enabled NAT
+[2025-07-12T10:42:44,948-04:00] <launcher> INFO  migration - Finished migration step: Provision gateways with SD-WAN spoke configuration and enabled NAT
+[2025-07-12T10:42:44,949-04:00] <launcher> INFO  migration - Started migration step: Provision gateways with SD-WAN NAT rule with protocol `all`
+[2025-07-12T10:42:44,950-04:00] <launcher> INFO  migration - Finished migration step: Provision gateways with SD-WAN NAT rule with protocol `all`
+[2025-07-12T10:42:44,952-04:00] <launcher> INFO  migration - Started migration step: Populate Hotspot voucher external IDs
+[2025-07-12T10:42:44,954-04:00] <launcher> INFO  migration - Finished migration step: Populate Hotspot voucher external IDs
+[2025-07-12T10:42:44,954-04:00] <launcher> INFO  migration - Started migration step: Map alert threat log id to alarm id
+[2025-07-12T10:42:44,958-04:00] <launcher> INFO  migration - Finished migration step: Map alert threat log id to alarm id
+[2025-07-12T10:42:44,959-04:00] <launcher> INFO  migration - Started migration step: Migrate Inspection Logs and Threats to Traffic Flows
+[2025-07-12T10:42:44,959-04:00] <launcher> INFO  migration - Extending startup timeout by 2400 seconds
+[2025-07-12T10:42:44,973-04:00] <launcher> INFO  migration - Total logs found: 0. Migrating 0 of 'inspection_log' to 'traffic_flow' started
+[2025-07-12T10:42:44,977-04:00] <launcher> INFO  migration - Migration of 0 'inspection_log' to 'traffic_flow' finished, and took 0s
+[2025-07-12T10:42:44,982-04:00] <launcher> INFO  migration - Total logs found: 0. Migrating 0 of 'alarm' to 'traffic_flow' started
+[2025-07-12T10:42:44,982-04:00] <launcher> INFO  migration - Migration of 0 'alarm' to 'traffic_flow' finished, and took 0s
+[2025-07-12T10:42:44,982-04:00] <launcher> INFO  migration - Finished migration step: Migrate Inspection Logs and Threats to Traffic Flows
+[2025-07-12T10:42:44,982-04:00] <launcher> INFO  migration - Started migration step: Drop legacy Inspection Log and Threat Log collections
+[2025-07-12T10:42:44,985-04:00] <launcher> INFO  migration - Finished migration step: Drop legacy Inspection Log and Threat Log collections
+[2025-07-12T10:42:44,985-04:00] <launcher> INFO  migration - Started migration step: Remove obsolete name and hostname feature migration flags
+[2025-07-12T10:42:44,989-04:00] <launcher> INFO  migration - Finished migration step: Remove obsolete name and hostname feature migration flags
+[2025-07-12T10:42:44,989-04:00] <launcher> INFO  migration - Started migration step: Provision RabbitMQ Message Broker config
+[2025-07-12T10:42:44,990-04:00] <launcher> INFO  migration - Finished migration step: Provision RabbitMQ Message Broker config
+[2025-07-12T10:42:44,990-04:00] <launcher> INFO  migration - Started migration step: Drop temporary Traffic Flows collection
+[2025-07-12T10:42:45,000-04:00] <launcher> ERROR migration - Migration failed: 'Drop temporary Traffic Flows collection': 'Command failed with error 13 (Unauthorized): 'not authorized on unifi_audit to execute command { listCollections: 1, cursor: {}, nameOnly: true, $db: "unifi_audit", lsid: { id: UUID("cc86d3ac-c6d9-49d9-9c46-5fbe4b1ab639") } }' on server unifi-db:27017. The full response is {"ok": 0.0, "errmsg": "not authorized on unifi_audit to execute command { listCollections: 1, cursor: {}, nameOnly: true, $db: \"unifi_audit\", lsid: { id: UUID(\"cc86d3ac-c6d9-49d9-9c46-5fbe4b1ab639\") } }", "code": 13, "codeName": "Unauthorized"}'
+org.springframework.data.mongodb.UncategorizedMongoDbException: Command failed with error 13 (Unauthorized): 'not authorized on unifi_audit to execute command { listCollections: 1, cursor: {}, nameOnly: true, $db: "unifi_audit", lsid: { id: UUID("cc86d3ac-c6d9-49d9-9c46-5fbe4b1ab639") } }' on server unifi-db:27017. The full response is {"ok": 0.0, "errmsg": "not authorized on unifi_audit to execute command { listCollections: 1, cursor: {}, nameOnly: true, $db: \"unifi_audit\", lsid: { id: UUID(\"cc86d3ac-c6d9-49d9-9c46-5fbe4b1ab639\") } }", "code": 13, "codeName": "Unauthorized"}
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:135)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:3020)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:584)
+	at org.springframework.data.mongodb.core.MongoTemplate.collectionExists(MongoTemplate.java:725)
+	at com.ubnt.service.trafficflow.oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.super.class.ÔO0000(Unknown Source)
+	at com.ubnt.service.system.mA.oõÓ000(Unknown Source)
+	at com.ubnt.service.system.mA.ÓõÔ000(Unknown Source)
+	at com.ubnt.service.system.mA.ÕõÒ000(Unknown Source)
+	at com.ubnt.service.system.mA.øÒo000(Unknown Source)
+	at com.ubnt.service.system.i.Object(Unknown Source)
+	at com.ubnt.service.system.db.migrator.B.A.Ó00000(Unknown Source)
+	at com.ubnt.service.system.db.migrator.B.A.o00000(Unknown Source)
+	at com.ubnt.service.Object.voidnew(Unknown Source)
+	at com.ubnt.service.system.db.migrator.B.A.ô00000(Unknown Source)
+	at com.ubnt.service.system.db.migrator.B.A.Ø00000(Unknown Source)
+	at com.ubnt.net.oOOo.ôÒ0000(Unknown Source)
+	at com.ubnt.service.Object.OÔ0000(Unknown Source)
+	at com.ubnt.ace.Launcher.Ó00000(Unknown Source)
+	at com.ubnt.ace.Launcher.main(Unknown Source)
+Caused by: com.mongodb.MongoCommandException: Command failed with error 13 (Unauthorized): 'not authorized on unifi_audit to execute command { listCollections: 1, cursor: {}, nameOnly: true, $db: "unifi_audit", lsid: { id: UUID("cc86d3ac-c6d9-49d9-9c46-5fbe4b1ab639") } }' on server unifi-db:27017. The full response is {"ok": 0.0, "errmsg": "not authorized on unifi_audit to execute command { listCollections: 1, cursor: {}, nameOnly: true, $db: \"unifi_audit\", lsid: { id: UUID(\"cc86d3ac-c6d9-49d9-9c46-5fbe4b1ab639\") } }", "code": 13, "codeName": "Unauthorized"}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:205)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:431)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:354)
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.sendAndReceive(UsageTrackingInternalConnection.java:114)
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.sendAndReceive(DefaultConnectionPool.java:743)
+	at com.mongodb.internal.connection.CommandProtocolImpl.execute(CommandProtocolImpl.java:76)
+	at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:209)
+	at com.mongodb.internal.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:115)
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:83)
+	at com.mongodb.internal.connection.DefaultServerConnection.command(DefaultServerConnection.java:74)
+	at com.mongodb.internal.connection.DefaultServer$OperationCountTrackingConnection.command(DefaultServer.java:299)
+	at com.mongodb.internal.operation.SyncOperationHelper.createReadCommandAndExecute(SyncOperationHelper.java:270)
+	at com.mongodb.internal.operation.ListCollectionsOperation.lambda$execute$1(ListCollectionsOperation.java:167)
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$0(SyncOperationHelper.java:124)
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:149)
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$withSourceAndConnection$1(SyncOperationHelper.java:123)
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:149)
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:122)
+	at com.mongodb.internal.operation.ListCollectionsOperation.lambda$execute$2(ListCollectionsOperation.java:164)
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateReadWithRetries$12(SyncOperationHelper.java:289)
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67)
+	at com.mongodb.internal.operation.ListCollectionsOperation.execute(ListCollectionsOperation.java:175)
+	at com.mongodb.internal.operation.ListCollectionsOperation.execute(ListCollectionsOperation.java:73)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:153)
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:130)
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:90)
+	at com.mongodb.client.internal.MappingIterable.iterator(MappingIterable.java:42)
+	at com.mongodb.client.internal.ListCollectionNamesIterableImpl.iterator(ListCollectionNamesIterableImpl.java:83)
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$collectionExists$9(MongoTemplate.java:727)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:582)
+	... 16 common frames omitted
+[2025-07-12T10:42:45,084-04:00] <launcher> INFO  migration - DB migration to version (9.2.87) is complete.
+[2025-07-12T10:42:45,085-04:00] <launcher> INFO  migration - DB migration itself took: 891ms
+[2025-07-12T10:42:45,086-04:00] <launcher> INFO  migration - DB migration closed
+[2025-07-12T10:42:45,087-04:00] <launcher> INFO  migration - DB migration took 1351ms in total

@@ -1,0 +1,30 @@
+---
+services:
+  nocodb:
+    image: nocodb/nocodb:latest
+    container_name: nocodb
+    restart: unless-stopped
+    security_opt: [no-new-privileges:true]
+    networks: [proxy]
+    environment:
+      TZ: America/Santo_Domingo
+      NC_DB: "pg://${DB_HOST}:${DB_PORT}?u=${DB_USER}&p=${DB_PASSWORD}&d=${DB_NAME}"
+      NC_PUBLIC_URL: ${NC_PUBLIC_URL}
+      NC_DISABLE_TELE: ${NC_DISABLE_TELE}
+      NC_REDIS_URL: ${NC_REDIS_URL}
+    volumes:
+      - nocodb_data:/usr/app/data
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.nocodb.rule=Host(`nocodb.facuint.org`)"
+      - "traefik.http.routers.nocodb.entrypoints=https"
+      - "traefik.http.routers.nocodb.tls.certresolver=cloudflare"
+      - "traefik.http.routers.nocodb.middlewares=crowdsec-bouncer@file"
+      - "traefik.http.services.nocodb.loadbalancer.server.port=8080"
+
+volumes:
+  nocodb_data:
+
+networks:
+  proxy:
+    external: true

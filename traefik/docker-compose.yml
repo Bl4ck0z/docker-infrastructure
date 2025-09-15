@@ -1,0 +1,59 @@
+---
+services:
+  traefik:
+    image: traefik:latest
+    container_name: traefik
+    restart: unless-stopped
+    security_opt: [no-new-privileges:true]
+    ports: 
+      - "80:80/tcp"
+      - "443:443/tcp"
+      - "443:443/udp"
+    expose: [80, 443]
+    networks: [proxy]
+    environment:
+      TZ: America/Santo_Domingo
+      CF_DNS_API_TOKEN: ${CF_DNS_API_TOKEN}
+      TRAEFIK_DASHBOARD_CREDENTIALS: ${TRAEFIK_DASHBOARD_CREDENTIALS}
+    volumes:
+      - ./config/traefik.yml:/etc/traefik/traefik.yml:ro
+      - ./config/dynamic.yml:/etc/traefik/dynamic.yml:ro
+      - traefik_logs:/logs
+      - traefik_acme:/etc/traefik/acme
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.facuint.org`)"
+      - "traefik.http.routers.traefik.entrypoints=http"
+      - "traefik.http.routers.traefik.middlewares=root-security@file"
+      - "traefik.http.routers.traefik-secure.rule=Host(`traefik.facuint.org`)"
+      - "traefik.http.routers.traefik-secure.entrypoints=https"
+      - "traefik.http.routers.traefik-secure.middlewares=root-security@file,traefik-auth"
+      - "traefik.http.routers.traefik-secure.tls=true"
+      - "traefik.http.routers.traefik-secure.tls.certresolver=cloudflare"
+      - "traefik.http.routers.traefik-secure.tls.domains[0].main=facuint.org"
+      - "traefik.http.routers.traefik-secure.tls.domains[0].sans=*.facuint.org"
+      - "traefik.http.routers.traefik-secure.service=api@internal"
+      - "traefik.http.middlewares.traefik-auth.basicauth.users=${TRAEFIK_DASHBOARD_CREDENTIALS}"
+
+  socket-proxy:
+    image: lscr.io/linuxserver/socket-proxy:latest
+    container_name: socket-proxy
+    restart: unless-stopped
+    security_opt: [no-new-privileges:true]
+    networks: [proxy]
+    read_only: true
+    tmpfs: [/run]
+    environment:
+      CONTAINERS: ${CONTAINERS}
+      EVENTS: ${EVENTS}
+    volumes: [/var/run/docker.sock:/var/run/docker.sock:ro]
+    
+volumes:
+  traefik_logs:
+    external: true
+  traefik_acme:
+    external: true
+
+networks:
+  proxy:
+    external: true

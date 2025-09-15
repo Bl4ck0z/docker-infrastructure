@@ -1,0 +1,38 @@
+---
+services:
+  crowdsec:
+    image: crowdsecurity/crowdsec:latest
+    container_name: crowdsec
+    restart: unless-stopped
+    security_opt: [no-new-privileges:true]
+    networks: [proxy]
+    ports: ["127.0.0.1:9876:8080"]
+    expose: [8080, 6060, 7422]
+    environment:
+      COLLECTIONS: ${COLLECTIONS}
+      GID: ${GID}
+      DISABLE_AGENT: ${DISABLE_AGENT}
+      DISABLE_ONLINE_API: ${DISABLE_ONLINE_API}
+      LEVEL_INFO: ${LEVEL_INFO}
+      LEVEL_DEBUG: ${LEVEL_DEBUG}
+      LEVEL_TRACE: ${LEVEL_TRACE}
+      SQLITE_WAL_MODE: ${SQLITE_WAL_MODE}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /var/log/auth.log:/var/log/auth.log:ro
+      - /var/log/syslog:/var/log/syslog:ro
+      - ./config/acquis.yaml:/etc/crowdsec/acquis.yaml:ro
+      - ./config/whitelist.yaml:/etc/crowdsec/postoverflows/s01-whitelist/mywhitelist.yaml:ro
+      - traefik_logs:/var/log/traefik:ro
+      - crowdsec_data:/var/lib/crowdsec/data
+
+volumes:
+  crowdsec_data:
+    external: true
+  traefik_logs:
+    external: true
+
+networks:
+  proxy:
+    external: true

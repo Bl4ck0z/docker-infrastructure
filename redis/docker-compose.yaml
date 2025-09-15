@@ -1,0 +1,28 @@
+---
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    restart: unless-stopped
+    security_opt: [no-new-privileges:true]
+    networks: [proxy]
+    ports: ["6379:6379"]
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    command: >
+      sh -c "redis-server 
+      --requirepass $$REDIS_PASSWORD
+      --appendonly yes
+      --appendfsync everysec
+      --save 900 1
+      --save 300 10
+      --save 60 10000"
+    volumes: [redis_data:/data]
+
+volumes:
+  redis_data:
+    external: true
+
+networks:
+  proxy:
+    external: true

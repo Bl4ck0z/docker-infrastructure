@@ -1,0 +1,20 @@
+name: crowdsecurity/whitelists
+description: "Whitelist for trusted IPs and Nextcloud usage"
+whitelist:
+  reason: "Owner IP - Heavy Nextcloud usage"
+  ip:
+    - "186.6.141.57"
+    - "179.52.191.96"
+  cidr:
+    - "186.6.0.0/15"
+    - "179.52.0.0/15"
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+    - "173.245.48.0/20"
+    - "103.21.244.0/22"
+    - "141.101.64.0/18"
+    - "108.162.192.0/18"
+    - "162.158.0.0/15"
+    - "104.16.0.0/13"
+    - "172.64.0.0/13"
