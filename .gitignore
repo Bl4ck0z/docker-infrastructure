@@ -14,5 +14,5 @@
 **/docker-entrypoint-initdb.d/
 .vscode/
 .idea/
-/unifi/data/db/
+unifi/
 sync-service/
