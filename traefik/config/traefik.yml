@@ -23,21 +23,7 @@ entryPoints:
       advertisedPort: 443
     http:
       tls:
-        options: default
-    forwardedHeaders:
-      trustedIPs:
-        - "10.0.0.0/8"
-        - "172.16.0.0/12"
-        - "192.168.0.0/16"
-        - "127.0.0.1/32"
-        - "173.245.48.0/20"
-        - "103.21.244.0/22"
-        - "103.22.200.0/22"
-        - "141.101.64.0/18"
-        - "108.162.192.0/18"
-        - "162.158.0.0/15"
-        - "104.16.0.0/13"
-        - "172.64.0.0/13"
+        options: default"
     transport:
       lifeCycle:
         requestAcceptGraceTimeout: 0s
@@ -86,7 +72,7 @@ experimental:
 certificatesResolvers:
   cloudflare:
     acme:
-      email: facuimport@gmail.com
+      email: admin@example.com
       storage: /etc/traefik/acme/acme.json
       caServer: https://acme-v02.api.letsencrypt.org/directory
       dnsChallenge:

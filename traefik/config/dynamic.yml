@@ -1,15 +1,15 @@
 http:
   routers:
-    nextcloud:
-      rule: "Host(`cloud.facuint.org`) || Host(`ncloud.facuint.org`)"
+    app-example:
+      rule: "Host(`app.example.com`)"
       entryPoints: [https]
-      service: nextcloud
-      middlewares: [nextcloud-security]
+      service: app-example
+      middlewares: [app-security]
       tls:
         certResolver: cloudflare
 
     root-domain:
-      rule: "Host(`facuint.org`)"
+      rule: "Host(`example.com`)"
       entryPoints: [https]
       service: dummy
       middlewares: [root-security]
@@ -17,15 +17,11 @@ http:
         certResolver: cloudflare
 
   services:
-    nextcloud:
+    app-example:
       loadBalancer:
         servers:
-          - url: "http://10.0.0.16"
+          - url: "http://your-app-server:port"
         passHostHeader: true
-        healthCheck:
-          path: "/status.php"
-          interval: "30s"
-          timeout: "5s"
 
     dummy:
       loadBalancer:
@@ -52,7 +48,7 @@ http:
           enabled: true
           logLevel: INFO
           crowdsecMode: stream
-          crowdsecLapiKey: "Yy6yhGwQzx6TFb/PJo/TXoIbDIRvK644q7nlOAHFs3U"
+          crowdsecLapiKey: "your_crowdsec_api_key_here"
           crowdsecLapiScheme: http
           crowdsecLapiHost: "crowdsec:8080"
           crowdsecLapiPath: "/"
@@ -66,33 +62,19 @@ http:
             - "10.0.0.0/8"
             - "172.16.0.0/12"
             - "192.168.0.0/16"
-            - "186.6.141.57/32"
-            - "179.52.191.96/32"
-            - "186.6.0.0/15"
-            - "179.52.0.0/15"
-          forwardedHeadersTrustedIPs:
-            - "173.245.48.0/20"
-            - "103.21.244.0/22"
-            - "141.101.64.0/18"
-            - "108.162.192.0/18"
-            - "162.158.0.0/15"
-            - "104.16.0.0/13"
-            - "172.64.0.0/13"
           forwardedHeadersCustomName: "X-Forwarded-For"
 
-    nextcloud-headers:
+    app-headers:
       headers:
         customRequestHeaders:
           X-Forwarded-Proto: "https"
         customResponseHeaders:
           Strict-Transport-Security: "max-age=63072000; includeSubDomains; preload"
-          Permissions-Policy: "geolocation=(), microphone=(), camera=(), payment=(), fullscreen=(self), autoplay=(self)"
           X-Frame-Options: "SAMEORIGIN"
           X-Content-Type-Options: "nosniff"
           X-XSS-Protection: "1; mode=block"
           Referrer-Policy: "same-origin"
-          Feature-Policy: ""
-          Server: ""
+          Permissions-Policy: "geolocation=(), microphone=(), camera=()"
 
     root-headers:
       headers:
@@ -105,19 +87,19 @@ http:
           X-XSS-Protection: "1; mode=block"
           Referrer-Policy: "same-origin"
           Permissions-Policy: "geolocation=(), microphone=(), camera=()"
-          Content-Security-Policy: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'"
+          Content-Security-Policy: "default-src 'self'"
 
     https-redirect:
       redirectScheme:
         scheme: https
         permanent: true
 
-    nextcloud-security:
+    app-security:
       chain:
         middlewares:
           - crowdsec-bouncer
           - rate-limit
-          - nextcloud-headers
+          - app-headers
 
     root-security:
       chain:

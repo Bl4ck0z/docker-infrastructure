@@ -1,0 +1,4 @@
+{
+  "comment": "This file will be automatically populated by Traefik with SSL certificates",
+  "note": "Copy this file to acme.json with 600 permissions: cp acme.json.example acme.json && chmod 600 acme.json"
+}

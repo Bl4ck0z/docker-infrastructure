@@ -16,7 +16,7 @@ services:
       - nocodb_data:/usr/app/data
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.nocodb.rule=Host(`nocodb.facuint.org`)"
+      - "traefik.http.routers.nocodb.rule=Host(`nocodb.example.com`)"
       - "traefik.http.routers.nocodb.entrypoints=https"
       - "traefik.http.routers.nocodb.tls.certresolver=cloudflare"
       - "traefik.http.routers.nocodb.middlewares=crowdsec-bouncer@file"
