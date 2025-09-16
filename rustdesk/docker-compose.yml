@@ -5,7 +5,7 @@ services:
     container_name: rustdesk-hbbs
     restart: unless-stopped
     security_opt: [no-new-privileges:true]
-    command: hbbs -r facuint.org:21117
+    command: hbbs -r example.com:21117
     ports:
       - "21115:21115"
       - "21116:21116" 
